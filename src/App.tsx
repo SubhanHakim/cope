@@ -2,6 +2,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Gallery } from './components/Gallery';
 
 function App() {
   return (
@@ -27,20 +28,7 @@ function App() {
         </div>
       </section>
 
-      {/* Gallery Section Placeholder */}
-      <section id="gallery" className="py-24 bg-black/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-pink-500">Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {/* Placeholders for gallery */}
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-500 animate-pulse">
-                MEME {i}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Gallery />
 
       <footer className="py-8 text-center text-gray-500 border-t border-white/5">
         <p>&copy; 2026 COPE Project. All rights reserved.</p>
