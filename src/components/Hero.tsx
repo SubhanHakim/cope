@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import heroBg from '../assets/Whisk_df7b9c71332a66e941e41a8b7ee719cddr.png';
-import { cn } from '../lib/utils'; // Assuming you might use it, though not strictly necessary if standard classes used.
+
 
 export const Hero = () => {
     return (
