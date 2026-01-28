@@ -77,7 +77,7 @@ export const Hero = () => {
                         <button className="px-8 py-4 bg-[var(--color-feet-orange)] text-white font-display text-2xl tracking-wider rounded-xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform hover:rotate-2" onClick={() => window.open('https://x.com/i/communities/2016549842831712530', '_blank')}>
                             JOIN THE CULT
                         </button>
-                        <button className="px-8 py-4 bg-[var(--color-beak-yellow)] text-black font-display text-2xl tracking-wider rounded-xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform hover:-rotate-2" onClick={() => window.open('#', '_blank')}>
+                        <button className="px-8 py-4 bg-[var(--color-beak-yellow)] text-black font-display text-2xl tracking-wider rounded-xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform hover:-rotate-2" onClick={() => window.open('https://pump.fun/coin/FdbUkWv9ezLxTfRu41Jk3rmpLgvtbFxBhyEPH1ifpump', '_blank')}>
                             BUY $COPE
                         </button>
                     </div>
