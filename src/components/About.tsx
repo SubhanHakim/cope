@@ -64,7 +64,7 @@ export const About = () => {
                             </p>
                         </div>
 
-                        <button className="w-full md:w-auto px-8 py-3 bg-[var(--color-beak-yellow)] text-black border-2 border-black rounded-xl font-bold text-xl hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all">
+                        <button className="w-full md:w-auto px-8 py-3 bg-[var(--color-beak-yellow)] text-black border-2 border-black rounded-xl font-bold text-xl hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all" onClick={() => window.open('https://x.com/i/communities/2016549842831712530', '_blank')}>
                             JOIN COMMUNITY
                         </button>
 
