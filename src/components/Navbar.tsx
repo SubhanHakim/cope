@@ -51,7 +51,7 @@ export const Navbar = () => {
                             </a>
 
                         </div>
-                        <button className="ml-4 bg-[var(--color-feet-orange)] text-white px-6 py-2 rounded-xl font-display text-xl tracking-wide brutal-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-px hover:shadow-none transition-all" onClick={() => window.open('https://pump.fun/coin/FdbUkWv9ezLxTfRu41Jk3rmpLgvtbFxBhyEPH1ifpump', '_blank')}>
+                        <button className="ml-4 bg-[var(--color-feet-orange)] text-white px-6 py-2 rounded-xl font-display text-xl tracking-wide brutal-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-px hover:shadow-none transition-all" onClick={() => window.open('https://pump.fun/coin/Ae2YjwotPv3uhNqaZKJAj1sBu53EKMTkB1Lgr5bJpump', '_blank')}>
                             BUY NOW
                         </button>
                     </div>
