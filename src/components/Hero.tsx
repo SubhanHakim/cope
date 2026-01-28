@@ -3,48 +3,43 @@ import heroBg from '../assets/Whisk_df7b9c71332a66e941e41a8b7ee719cddr.png';
 
 export const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
 
-                {/* Floating Elements (Badge/Sticker) */}
-                <motion.div
-                    animate={{ rotate: [0, 10, -10, 0] }}
-                    transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                    className="absolute top-0 right-0 md:right-20 hidden md:block"
-                >
-                    <div className="bg-[var(--color-beak-yellow)] text-black font-display text-2xl p-4 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-12">
-                        NO GODS<br />JUST NOOT
-                    </div>
-                </motion.div>
+
 
                 {/* Main Heading_ */}
                 <motion.div
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ type: "spring", bounce: 0.5 }}
-                    className="mb-8 relative"
+                    className="mb-12 relative z-10 flex flex-col items-center gap-2"
                 >
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-stroke relative z-10">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-stroke drop-shadow-xl leading-none">
                         CULTURE OF
-                        <br />
-                        <span className="text-[var(--color-ocean-blue)]">PENGUIN</span>
+                    </h1>
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-[var(--color-ocean-blue)] text-stroke drop-shadow-xl leading-none mt-4 md:mt-2">
+                        PENGUIN
                     </h1>
                 </motion.div>
 
-                {/* Image Display - Sticker Style */}
+                {/* Image Display - Large & Clear */}
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="relative w-64 h-64 md:w-96 md:h-96 my-[-20px] md:my-[-40px] z-0"
+                    className="relative w-full max-w-4xl mx-auto -mt-10 z-0"
                 >
-                    <div className="absolute inset-0 bg-white rounded-full scale-105 border-4 border-black" />
-                    <img
-                        src={heroBg}
-                        alt="Hero Penguin"
-                        className="w-full h-full object-cover rounded-full border-4 border-black object-bottom relative z-10"
-                    />
+                    <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white">
+                        <img
+                            src={heroBg}
+                            alt="Hero Penguin"
+                            className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                        />
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none" />
+                    </div>
                 </motion.div>
 
                 {/* Subtext */}

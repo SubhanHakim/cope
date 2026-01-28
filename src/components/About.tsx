@@ -20,7 +20,7 @@ export const About = () => {
                             <img
                                 src={aboutImg}
                                 alt="Cult Leader Penguin"
-                                className="w-full h-auto object-cover grayscale opacity-90 contrast-125"
+                                className="w-full h-auto object-cover"
                             />
                         </div>
                         <p className="absolute bottom-4 left-0 right-0 text-center font-display text-3xl text-black -rotate-2">
@@ -38,7 +38,7 @@ export const About = () => {
                         className="space-y-6"
                     >
                         <div className="bg-[var(--color-ocean-blue)] text-white p-6 rounded-2xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <h2 className="text-4xl md:text-6xl font-display mb-2 text-stroke">
+                            <h2 className="text-5xl md:text-7xl font-display mb-4 drop-shadow-[3px_3px_0_rgba(0,0,0,1)] leading-[1.1]">
                                 THE AWAKENING
                             </h2>
                             <p className="text-xl font-bold font-body">
@@ -46,20 +46,20 @@ export const About = () => {
                             </p>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl brutal-border brutal-shadow space-y-4 text-lg font-medium text-black">
+                        <div className="bg-white p-8 rounded-2xl brutal-border brutal-shadow space-y-6 text-xl font-bold text-black leading-relaxed">
                             <p>
-                                Listen up, you frozen nuggets. Markets crash, tokens rug, but <strong className="bg-yellow-200 px-1 border border-black rounded">PENGUINS SLIDE</strong>.
+                                Listen up, you frozen nuggets. Markets crash, tokens rug, but <strong className="bg-[#ffd700] px-2 py-1 border-2 border-black rounded-lg transform -rotate-1 inline-block">PENGUINS SLIDE</strong>.
                             </p>
                             <p>
                                 We are not just a coin. We are a flock. A waddle. An unstoppable avalanche of meme energy crashing into the blockchain.
                             </p>
-                            <p className="text-xl font-bold text-[var(--color-feet-orange)]">
+                            <p className="text-2xl font-black text-[var(--color-feet-orange)] uppercase tracking-wide">
                                 If you aren't coping, are you even living?
                             </p>
                         </div>
 
                         <button className="w-full md:w-auto px-8 py-3 bg-[var(--color-beak-yellow)] text-black border-2 border-black rounded-xl font-bold text-xl hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all">
-                            READ THE SACRED TEXTS (Whitepaper)
+                            JOIN COMMUNITY
                         </button>
 
                     </motion.div>

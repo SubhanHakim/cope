@@ -7,8 +7,8 @@ import logo from '../assets/logo.png';
 const navLinks = [
     { name: 'HOME', href: '#home' },
     { name: 'CULT', href: '#about' },
-    { name: 'HOARD', href: '#tokenomics' },
-    { name: 'MEMES', href: '#gallery' },
+    { name: 'TOKENOMICS', href: '#tokenomics' },
+    { name: 'GALLERY', href: '#gallery' },
 ];
 
 export const Navbar = () => {
@@ -61,31 +61,47 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Nav */}
+            {/* Mobile Nav Overlay */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="absolute top-20 left-4 right-4 md:hidden"
-                    >
-                        <div className="bg-white brutal-border brutal-shadow rounded-2xl p-4 flex flex-col space-y-2">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="block px-4 py-3 rounded-xl font-bold text-black hover:bg-[var(--color-beak-yellow)] text-center border-2 border-transparent hover:border-black transition-all"
-                                >
-                                    {link.name}
-                                </a>
-                            ))}
-                            <button className="w-full bg-[var(--color-feet-orange)] text-white px-6 py-3 rounded-xl font-display text-2xl brutal-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-y-1 transition-all mt-2">
-                                BUY NOW
-                            </button>
-                        </div>
-                    </motion.div>
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsOpen(false)}
+                            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+                        />
+
+                        {/* Menu */}
+                        <motion.div
+                            initial={{ y: -50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -50, opacity: 0 }}
+                            className="absolute top-[80px] left-4 right-4 md:hidden z-50 origin-top"
+                        >
+                            <div className="bg-white brutal-border rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                                <div className="p-2 space-y-1">
+                                    {navLinks.map((link) => (
+                                        <a
+                                            key={link.name}
+                                            href={link.href}
+                                            onClick={() => setIsOpen(false)}
+                                            className="block px-6 py-4 rounded-xl font-display text-xl text-black hover:bg-[var(--color-beak-yellow)] text-center transition-colors active:scale-95"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    ))}
+                                </div>
+                                <div className="p-4 border-t-2 border-black bg-gray-50">
+                                    <button className="w-full bg-[var(--color-feet-orange)] text-white px-6 py-4 rounded-xl font-display text-2xl border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-y-[2px] transition-all">
+                                        BUY NOW
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </nav>
