@@ -38,7 +38,7 @@ export const About = () => {
                         className="space-y-6"
                     >
                         <div className="bg-[var(--color-ocean-blue)] text-white p-6 rounded-2xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <h2 className="text-5xl md:text-7xl font-display mb-4 drop-shadow-[3px_3px_0_rgba(0,0,0,1)] leading-[1.1]">
+                            <h2 className="text-5xl md:text-7xl font-display mb-4 leading-[1.1] font-black">
                                 THE AWAKENING
                             </h2>
                             <p className="text-xl font-bold font-body">
@@ -48,13 +48,19 @@ export const About = () => {
 
                         <div className="bg-white p-8 rounded-2xl brutal-border brutal-shadow space-y-6 text-xl font-bold text-black leading-relaxed">
                             <p>
-                                Listen up, you frozen nuggets. Markets crash, tokens rug, but <strong className="bg-[#ffd700] px-2 py-1 border-2 border-black rounded-lg transform -rotate-1 inline-block">PENGUINS SLIDE</strong>.
+                                Cult Of Penguin was born deep in the trenches not by accident, but by sheer inevitability. When the trenches flooded with penguins, something had to happen.
                             </p>
                             <p>
-                                We are not just a coin. We are a flock. A waddle. An unstoppable avalanche of meme energy crashing into the blockchain.
+                                At first, they were just memes. Then they multiplied. Soon, the trenches were no longer ruled by humans, charts, or logic but by penguins.
+                            </p>
+                            <p>
+                                From this chaos, Cult Of Penguin emerged. A movement formed by trenchers who embraced the cold, the madness, and the collective belief that penguins run the trenches now.
+                            </p>
+                            <p className="font-bold text-[var(--color-ocean-blue)]">
+                                This is not just another coin. It’s a cult. If you’re still in the trenches, you’re already one of us.
                             </p>
                             <p className="text-2xl font-black text-[var(--color-feet-orange)] uppercase tracking-wide">
-                                If you aren't coping, are you even living?
+                                Welcome to the Cult Of Penguin.
                             </p>
                         </div>
 

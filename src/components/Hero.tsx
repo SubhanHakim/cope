@@ -16,10 +16,10 @@ export const Hero = () => {
                     transition={{ type: "spring", bounce: 0.5 }}
                     className="mb-12 relative z-10 flex flex-col items-center gap-2"
                 >
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-stroke drop-shadow-xl leading-none">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-black font-black leading-none tracking-tight">
                         CULTURE OF
                     </h1>
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-[var(--color-ocean-blue)] text-stroke drop-shadow-xl leading-none mt-4 md:mt-2">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-[var(--color-ocean-blue)] font-black leading-none tracking-tight mt-4 md:mt-2">
                         PENGUIN
                     </h1>
                 </motion.div>
@@ -50,7 +50,7 @@ export const Hero = () => {
                     className="bg-white p-6 rounded-2xl brutal-border brutal-shadow max-w-2xl mx-auto mt-8 rotate-1 transform hover:rotate-0 transition-transform duration-300"
                 >
                     <p className="text-xl md:text-2xl font-bold text-black">
-                        Welcome to the <span className="text-[var(--color-feet-orange)]">CULT</span>, anon! 🐧
+                        Welcome to the <span className="text-[var(--color-feet-orange)]">CULT</span>, anon!
                     </p>
                     <p className="text-lg text-gray-800 mt-2 font-medium">
                         Waddle your way to financial freedom. Or just slide on the ice. We don't judge.

@@ -19,7 +19,7 @@ export const Gallery = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-6xl md:text-8xl font-display text-white text-stroke transform -rotate-2 inline-block">
+                    <h2 className="text-6xl md:text-8xl font-display text-white font-black transform -rotate-2 inline-block">
                         HALL OF MEMES
                     </h2>
                     <div className="bg-white border-2 border-black p-2 inline-block rounded-lg transform rotate-2 mt-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
