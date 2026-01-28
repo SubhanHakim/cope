@@ -44,6 +44,13 @@ export const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
+                        <div className="flex items-center gap-3 ml-4 border-l-2 border-black pl-4">
+                            <a href="#" className="p-2 bg-[var(--color-ice-200)] rounded-lg border-2 border-black hover:-translate-y-1 transition-transform">
+                                {/* X / Twitter Icon */}
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                            </a>
+
+                        </div>
                         <button className="ml-4 bg-[var(--color-feet-orange)] text-white px-6 py-2 rounded-xl font-display text-xl tracking-wide brutal-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-px hover:shadow-none transition-all">
                             BUY NOW
                         </button>
