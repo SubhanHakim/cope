@@ -1,77 +1,82 @@
 import { motion } from 'framer-motion';
 import heroBg from '../assets/Whisk_df7b9c71332a66e941e41a8b7ee719cddr.png';
 
-
 export const Hero = () => {
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image - Clean uniform overlay */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src={heroBg}
-                    alt="Hero Background"
-                    className="w-full h-full object-cover object-bottom"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 opacity-80" />
-            </div>
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
 
-            {/* Content */}
-            <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center h-full pt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
 
+                {/* Floating Elements (Badge/Sticker) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="mb-8"
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                    className="absolute top-0 right-0 md:right-20 hidden md:block"
                 >
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-tight">
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 pb-2">
-                            Culture Of
-                        </span>
-                        <span className="block">
-                            Penguin
-                        </span>
+                    <div className="bg-[var(--color-beak-yellow)] text-black font-display text-2xl p-4 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-12">
+                        NO GODS<br />JUST NOOT
+                    </div>
+                </motion.div>
+
+                {/* Main Heading_ */}
+                <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", bounce: 0.5 }}
+                    className="mb-8 relative"
+                >
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-stroke relative z-10">
+                        CULTURE OF
+                        <br />
+                        <span className="text-[var(--color-ocean-blue)]">PENGUIN</span>
                     </h1>
                 </motion.div>
 
+                {/* Image Display - Sticker Style */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="max-w-2xl mx-auto space-y-6 mb-12"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    className="relative w-64 h-64 md:w-96 md:h-96 my-[-20px] md:my-[-40px] z-0"
                 >
-                    <p className="text-xl md:text-2xl text-gray-100 font-light leading-relaxed">
-                        Welcome to the <span className="text-cyan-400 font-medium">Cult of Penguin</span>.
+                    <div className="absolute inset-0 bg-white rounded-full scale-105 border-4 border-black" />
+                    <img
+                        src={heroBg}
+                        alt="Hero Penguin"
+                        className="w-full h-full object-cover rounded-full border-4 border-black object-bottom relative z-10"
+                    />
+                </motion.div>
+
+                {/* Subtext */}
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="bg-white p-6 rounded-2xl brutal-border brutal-shadow max-w-2xl mx-auto mt-8 rotate-1 transform hover:rotate-0 transition-transform duration-300"
+                >
+                    <p className="text-xl md:text-2xl font-bold text-black">
+                        Welcome to the <span className="text-[var(--color-feet-orange)]">CULT</span>, anon! 🐧
                     </p>
-                    <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto">
-                        Get ready to ascend beyond mere mortal gains.
-                        Converting normies into enlightened disciples, one meme at a time.
+                    <p className="text-lg text-gray-800 mt-2 font-medium">
+                        Waddle your way to financial freedom. Or just slide on the ice. We don't judge.
                     </p>
                 </motion.div>
 
-                {/* CTA Buttons - Clean & Minimal */}
+                {/* Buttons */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-5 items-center w-full justify-center"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="mt-10 flex flex-col sm:flex-row gap-6"
                 >
-                    <button className="min-w-[160px] px-8 py-3.5 bg-white text-black font-bold text-lg rounded-full hover:bg-gray-200 transition-colors duration-300">
-                        Join the Cult
+                    <button className="px-8 py-4 bg-[var(--color-feet-orange)] text-white font-display text-2xl tracking-wider rounded-xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform hover:rotate-2">
+                        JOIN THE CULT
                     </button>
-                    <button className="min-w-[160px] px-8 py-3.5 bg-transparent border border-white/30 text-white font-medium text-lg rounded-full hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm">
-                        Buy Token
+                    <button className="px-8 py-4 bg-[var(--color-beak-yellow)] text-black font-display text-2xl tracking-wider rounded-xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform hover:-rotate-2">
+                        BUY $COPE
                     </button>
                 </motion.div>
 
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-                    <div className="w-1 h-3 bg-white/50 rounded-full" />
-                </div>
             </div>
         </section>
     );

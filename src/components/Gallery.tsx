@@ -7,60 +7,50 @@ import img3 from '../assets/gallery/WhatsApp Image 2026-01-27 at 23.35.00.jpeg';
 import img4 from '../assets/gallery/WhatsApp Image 2026-01-27 at 23.44.41.jpeg';
 
 const images = [
-    { src: img1, alt: 'Cosmic Prophet', caption: 'The Oracle Speaks' },
-    { src: img2, alt: 'Vibe Check', caption: 'Vibe Check: PASSED' },
-    { src: img3, alt: 'Ascension', caption: 'Ascending to the Moon' },
-    { src: img4, alt: 'Community', caption: 'Penguin Gang Strong' },
+    { src: img1, alt: 'Cosmic Prophet', caption: 'ORACLE NOOT' },
+    { src: img2, alt: 'Vibe Check', caption: 'VIBE CHECK' },
+    { src: img3, alt: 'Ascension', caption: 'MOON SOON' },
+    { src: img4, alt: 'Community', caption: 'GANG SHIT' },
 ];
 
 export const Gallery = () => {
     return (
-        <section id="gallery" className="py-24 bg-[#0a0a0f] relative overflow-hidden">
-            {/* Background blobs */}
-            <div className="absolute top-1/4 left-0 w-96 h-96 bg-purple-900/10 blur-[100px] rounded-full" />
-            <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-blue-900/10 blur-[100px] rounded-full" />
+        <section id="gallery" className="py-24 bg-[var(--color-beak-yellow)] relative overflow-hidden border-y-4 border-black">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 mb-4">
-                        Hall of Memes
+                <div className="text-center mb-16">
+                    <h2 className="text-6xl md:text-8xl font-display text-white text-stroke transform -rotate-2 inline-block">
+                        HALL OF MEMES
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        Witness the historical archives of the Cult.
-                        These are not just JPEGs, they are holy scriptures.
-                    </p>
-                </motion.div>
+                    <div className="bg-white border-2 border-black p-2 inline-block rounded-lg transform rotate-2 mt-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        <p className="text-xl font-bold font-body">Warning: May Cause Uncontrollable Honking</p>
+                    </div>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {images.map((img, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 1 : -1 }}
-                            className="group relative rounded-xl overflow-hidden border-2 border-white/5 hover:border-[var(--color-neon-blue)] transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(0,243,255,0.2)]"
+                            whileHover={{ scale: 1.1, rotate: index % 2 === 0 ? 5 : -5, zIndex: 10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className={`group bg-white p-3 pb-12 brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
                         >
-                            <div className="aspect-[3/4] overflow-hidden bg-white/5">
+                            {/* Pin */}
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-500 border-2 border-black shadow-sm z-20" />
+
+                            <div className="aspect-square overflow-hidden border-2 border-black bg-gray-100">
                                 <img
                                     src={img.src}
                                     alt={img.alt}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <p className="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                    {img.caption}
-                                </p>
-                            </div>
+                            <p className="mt-4 text-center font-display text-2xl text-black">
+                                {img.caption}
+                            </p>
                         </motion.div>
                     ))}
                 </div>
