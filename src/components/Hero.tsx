@@ -5,7 +5,7 @@ import heroBg from '../assets/Whisk_df7b9c71332a66e941e41a8b7ee719cddr.png';
 
 export const Hero = () => {
     const [copied, setCopied] = useState(false);
-    const ca = "Coming Soon"; // Placeholder Contract Address
+    const ca = "Ae2YjwotPv3uhNqaZKJAj1sBu53EKMTkB1Lgr5bJpump"; // Placeholder Contract Address
 
     const handleCopy = () => {
         navigator.clipboard.writeText(ca);
