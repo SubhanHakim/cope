@@ -39,10 +39,10 @@ export const About = () => {
                     >
                         <div className="bg-[var(--color-ocean-blue)] text-white p-6 rounded-2xl brutal-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                             <h2 className="text-5xl md:text-7xl font-display mb-4 leading-[1.1] font-black">
-                                THE AWAKENING
+                                THE GENESIS
                             </h2>
-                            <p className="text-xl font-bold font-body">
-                                "NOOT NOOT!" - <span className="italic opacity-80">Ancient Scriptures</span>
+                            <p className="text-xl font-bold font-body uppercase tracking-widest opacity-90">
+                                "Born in the trenches."
                             </p>
                         </div>
 
